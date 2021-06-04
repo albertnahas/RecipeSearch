@@ -69,7 +69,7 @@ const Home: React.FC = () => {
             </p>
           </Panel>
         </Panel>
-        <img className="veganIcon" src="https://uxwing.com/wp-content/themes/uxwing/download/20-food-and-drinks/vegan.png" alt="" />
+        {recipe.vegan && <img className="veganIcon" src="https://uxwing.com/wp-content/themes/uxwing/download/20-food-and-drinks/vegan.png" alt="" />}
       </Col>
     });
   }
