@@ -7,7 +7,7 @@ type Props = {
   recipe: any
 }
 
-const { Column, HeaderCell, Cell, Pagination } = Table;
+const { Column, HeaderCell, Cell } = Table;
 
 const IngredientsTable: React.FC<Props> = ({ recipe }) => (
   <div>

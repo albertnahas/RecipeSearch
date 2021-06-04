@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, ButtonToolbar, Col, Grid, List, Modal, Radio, RadioGroup, Row, Timeline } from 'rsuite';
+import React from 'react';
+import { Button, Col, Grid, List, Modal, Row, Timeline } from 'rsuite';
 import { getNutrient } from '../../utils/iconsMappings';
 import IngredientsTable from '../IngredientsTable/IngredientsTable';
 import './DetailsModal.scss';
@@ -14,9 +14,6 @@ const DetailsModal: React.FC<Props> = ({ show, setShow, recipe }) => {
   const close = () => {
     setShow(false);
   }
-  const open = () => {
-    setShow(true);
-  }
 
   return recipe && (
     <div className="modal-container" >
@@ -27,7 +24,7 @@ const DetailsModal: React.FC<Props> = ({ show, setShow, recipe }) => {
         <Modal.Body>
           <Grid fluid>
             <Row>
-              <Col xs={12}><img style={{ maxWidth: '100%', borderRadius: 5 }} src={recipe.image} /></Col>
+              <Col xs={12}><img alt={recipe.title} style={{ maxWidth: '100%', borderRadius: 5 }} src={recipe.image} /></Col>
               <Col xs={12}>
                 <List style={{ margin: 5 }} size="sm" bordered>
                   <List.Item>Calories: {getNutrient(recipe, 'Calories')}kcal</List.Item>

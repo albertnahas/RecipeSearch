@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, Container, Grid, Header, Row, Col, Content, Panel } from 'rsuite';
-import FoodIcon from '../FoodIcon/FoodIcon';
 import FoodInput from '../FoodInput/FoodInput';
 import './Home.scss';
 import axios from 'axios'
@@ -58,7 +57,7 @@ const Home: React.FC = () => {
     return recipes.map((recipe: any) => {
       return <Col key={recipe.id} md={6}>
         <Panel style={{ height: 370, marginBottom: 15 }} onClick={() => showRecipeDetails(recipe)} shaded bordered bodyFill>
-          <img src={recipe.image} style={{width:'100%'}} />
+          <img alt={recipe.title} src={recipe.image} style={{width:'100%'}} />
           <Panel header={recipe.title}>
             <p>
               <small>Calories: {getNutrient(recipe, 'Calories')}</small>

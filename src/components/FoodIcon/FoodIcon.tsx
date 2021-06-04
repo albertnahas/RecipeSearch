@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './FoodIcon.scss';
-import cereals from '../../icons/beans.svg';
 import { foodIcons } from '../../utils/iconsMappings';
 
 type Props = {
@@ -23,7 +22,7 @@ const FoodIcon: React.FC<Props> = (props: Props) => {
     return () => {
 
     }
-  }, [])
+  }, [props.src])
 
 
   const fallbackSrc = require(`../../icons/item.svg`).default;

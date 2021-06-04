@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './FoodInput.scss';
 import * as _ from 'lodash';
-import { Icon, TagPicker } from 'rsuite';
+import { TagPicker } from 'rsuite';
 import { throttle } from 'lodash';
 import FoodIcon from '../FoodIcon/FoodIcon';
 
@@ -11,7 +11,7 @@ type Props = {
 }
 const FoodInput: React.FC<Props> = ({ setIngredients, ingredients }) => {
 
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
   const [cachedItems, setCachedItems] = useState<any[]>([]);
 
@@ -36,27 +36,16 @@ const FoodInput: React.FC<Props> = ({ setIngredients, ingredients }) => {
         .then(function (myJson) {
           const matches = myJson.filter((i: any) => i.name.match(new RegExp(word, "i"))).splice(0, 10);
           setItems(matches);
-          setLoading(false);
+          // setLoading(false);
         });
     }, 400), []);
-
-  const getUsers = React.useMemo(
-    () => throttle((word: string) => {
-      fetch(`https://api.github.com/search/users?q=${word}`)
-        .then(response => response.json())
-        .then(data => {
-          setItems(data.items);
-          setLoading(false);
-        })
-        .catch(e => console.log('Oops, error', e));
-    }, 200), []);
 
   const handleSearch = (word: string) => {
     if (!word) {
       return;
     }
 
-    setLoading(true);
+    // setLoading(true);
     getData(word);
   }
 
