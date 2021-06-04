@@ -1,5 +1,7 @@
 # Recipe Search React App
 
+Live Demo: https://fervent-wing-af8a26.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
