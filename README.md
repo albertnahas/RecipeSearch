@@ -1,4 +1,6 @@
 # Recipe Search React App
+Recipe search based on available ingredients list
+Including instruction, and nutrition facts for each recipe
 
 Live Demo: https://fervent-wing-af8a26.netlify.app/
 
