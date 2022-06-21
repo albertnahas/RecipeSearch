@@ -2,7 +2,7 @@
 Recipe search based on available ingredients list
 Including instruction, and nutrition facts for each recipe
 
-Live Demo: https://fervent-wing-af8a26.netlify.app/
+Live Demo: https://findmymeal.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
